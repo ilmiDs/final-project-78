@@ -3,18 +3,18 @@ package struct
 import "time"
 
 type Buku struct {
-	ID          int       `json:"id"`
-	ISBN        int       `json:"isbn"`
-	PDF         string    `json:"pdf"`
-	Cover       string    `json:"cover"`
-	Bahasa      string    `json:"bahasa"`
-	JumlahHalaman int       `json:"jumlah_halaman"`
-	Tahun        string    `json:"tahun"`
-	Judul        string    `json:"judul"`
-	Penulis      string    `json:"penulis"`
-	Penerbit     string    `json:"penerbit"`
-	Kategori     string    `json:"kategori"`
-	Deskripsi    string    `json:"deskripsi"`
-	CreatedAt    time.Time `json:"created_at"`
-	UpdatedAt    time.Time `json:"updated_at"`
+	ID          int       `db:"id" json:"id"`
+	ISBN        int       `db:"isbn" json:"isbn"`
+	PDF         string    `db:"pdf" json:"pdf"`
+	Cover       string    `db:"cover" json:"cover"`
+	Bahasa      string    `db:"bahasa" json:"bahasa"`
+	JumlahHalaman int       `db:"jumlah_halaman" json:"jumlah_halaman"`
+	Tahun       int       `db:"tahun" json:"tahun"`
+	Judul       string    `db:"judul" json:"judul"`
+	Penulis     string    `db:"penulis" json:"penulis"`
+	Penerbit    string    `db:"penerbit" json:"penerbit"`
+	Kategori    string    `db:"kategori" json:"kategori"`
+	Deskripsi   string    `db:"deskripsi" json:"deskripsi"`
+	CreatedAt   time.Time `db:"created_at" json:"created_at"`
+	UpdatedAt   time.Time `db:"updated_at" json:"updated_at"`
 }

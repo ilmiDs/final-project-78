@@ -22,7 +22,7 @@ func main() {
 		gambar varchar(255) not null,
 		falkultas varchar(255) not null,
 		no_hp varchar(255) not null,
-		kelamin boolean not null,
+		kelamin varchar(255) not null,
 		password varchar(255) not null,
 		role varchar(255) not null,
 		logged_in boolean not null,
