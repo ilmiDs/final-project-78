@@ -1,4 +1,4 @@
-package config
+package main
 
 import (
 	"database/sql"
@@ -12,7 +12,7 @@ func main() {
 		panic(err)
 	}
 
-_, err = db.Exec(`
+	_, err = db.Exec(`
 
 	CREATE TABLE IF NOT EXISTS user (
 		id integer not null primary key,
@@ -87,7 +87,7 @@ _, err = db.Exec(`
 
 	create into user(id, nim, username, email, gambar, falkultas, no_hp, kelamin, password, role, logged_in, created_at, updated_at) values
 	(1, 123456789, 'admin', 'ilmi','ilmi@gmail.com', 'admin.jpg', 'Fakultas Teknik', '081234567890', true, 'admin', 'admin', '2020-01-01 00:00:00', '2020-01-01 00:00:00'),
-	`);
+	`)
 	if err != nil {
 		panic(err)
 	}
